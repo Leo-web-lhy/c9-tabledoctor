@@ -1,0 +1,64 @@
+{
+  "title": "脏表医生 · TableDoctor 体检报告",
+  "subtitle": "全部本地运行，不上传任何数据",
+  "label_file": "文件",
+  "label_rows": "数据行",
+  "label_cols": "列数",
+  "label_encoding": "编码 / 格式",
+  "label_score": "健康分",
+  "label_issues": "问题总数",
+  "label_generated": "生成时间",
+  "section_summary": "体检结论",
+  "section_issues": "问题清单",
+  "th_severity": "级别",
+  "th_check": "检查项",
+  "th_column": "列",
+  "th_count": "影响数量",
+  "th_samples": "样例",
+  "th_note": "说明 / 依据",
+  "no_issue": "未发现明显问题，可用于后续分析。",
+  "column_whole_table": "（整表）",
+  "severity": {
+    "error": "需修复",
+    "warning": "建议处理",
+    "info": "提示"
+  },
+  "checks": {
+    "empty_column": {
+      "label": "整列为空",
+      "hint": "该列所有单元格都为空，通常是导出或合并表头出错"
+    },
+    "near_empty_column": {
+      "label": "近似空列",
+      "hint": "有效填充比例不超过 5%，几乎没有信息量"
+    },
+    "high_missing_column": {
+      "label": "缺失率偏高",
+      "hint": "缺失比例超过 50%，统计口径需要先声明"
+    },
+    "constant_column": {
+      "label": "常量列",
+      "hint": "整列只有一个取值，多数情况下可以直接删除"
+    },
+    "duplicate_rows": {
+      "label": "重复行",
+      "hint": "存在完全相同的行，求和或计数会被重复放大"
+    },
+    "duplicate_key": {
+      "label": "主键重复",
+      "hint": "指定主键列出现重复值，一条记录被拆成多条"
+    },
+    "type_mismatch": {
+      "label": "类型不一致",
+      "hint": "数值列混入文本，或日期列混用多种格式"
+    },
+    "whitespace_cells": {
+      "label": "首尾空格 / 不可见字符",
+      "hint": "会导致分组、关联、模糊匹配全部失败"
+    },
+    "ragged_rows": {
+      "label": "行列数不齐",
+      "hint": "某些行的单元格数量与表头不一致，字段可能整体错位"
+    }
+  }
+}

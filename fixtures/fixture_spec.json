@@ -1,0 +1,20 @@
+{
+  "columns": ["订单号", "客户", "下单日期", "地区", "金额", "备注", "废弃列", "渠道"],
+  "customers": ["张三", "李四", "王五", "赵六", "钱七", "孙八"],
+  "regions": ["华东", "华南", "华北", "西南", "东北"],
+  "notes": ["加急", "送礼", "老客复购"],
+  "note_start_rows": [40, 41, 42],
+  "row_count": 60,
+  "clean_row_count": 20,
+  "defects": {
+    "whitespace_column": 1,
+    "whitespace_rows": 30,
+    "dup_key_rows": 1,
+    "dup_row_copies": 4,
+    "text_amount_rows": 3,
+    "loose_date_rows": 2,
+    "region_missing_rows": 33,
+    "note_fill_rows": 3,
+    "ragged_csv_rows": 2
+  }
+}

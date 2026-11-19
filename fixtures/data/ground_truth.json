@@ -1,0 +1,108 @@
+{
+  "generated_by": "fixtures/gen.py",
+  "seed": 20261119,
+  "cases": [
+    {
+      "name": "orders_messy.xlsx",
+      "path": "data\\orders_messy.xlsx",
+      "key": 0,
+      "rows": 65,
+      "truth": [
+        {
+          "check": "empty_column",
+          "column": 6
+        },
+        {
+          "check": "constant_column",
+          "column": 7
+        },
+        {
+          "check": "near_empty_column",
+          "column": 5
+        },
+        {
+          "check": "high_missing_column",
+          "column": 3
+        },
+        {
+          "check": "type_mismatch",
+          "column": 4
+        },
+        {
+          "check": "type_mismatch",
+          "column": 2
+        },
+        {
+          "check": "whitespace_cells",
+          "column": 1
+        },
+        {
+          "check": "duplicate_rows",
+          "column": -1
+        },
+        {
+          "check": "duplicate_key",
+          "column": 0
+        }
+      ],
+      "injected_defects": 9
+    },
+    {
+      "name": "orders_messy.csv",
+      "path": "data\\orders_messy.csv",
+      "key": 0,
+      "rows": 65,
+      "truth": [
+        {
+          "check": "empty_column",
+          "column": 6
+        },
+        {
+          "check": "constant_column",
+          "column": 7
+        },
+        {
+          "check": "near_empty_column",
+          "column": 5
+        },
+        {
+          "check": "high_missing_column",
+          "column": 3
+        },
+        {
+          "check": "type_mismatch",
+          "column": 4
+        },
+        {
+          "check": "type_mismatch",
+          "column": 2
+        },
+        {
+          "check": "whitespace_cells",
+          "column": 1
+        },
+        {
+          "check": "duplicate_rows",
+          "column": -1
+        },
+        {
+          "check": "duplicate_key",
+          "column": 0
+        },
+        {
+          "check": "ragged_rows",
+          "column": -1
+        }
+      ],
+      "injected_defects": 10
+    },
+    {
+      "name": "clean_orders.csv",
+      "path": "data\\clean_orders.csv",
+      "key": 0,
+      "rows": 20,
+      "truth": [],
+      "injected_defects": 0
+    }
+  ]
+}

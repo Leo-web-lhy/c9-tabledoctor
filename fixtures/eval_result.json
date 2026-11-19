@@ -1,0 +1,57 @@
+{
+  "generated_by": "fixtures/evaluate.py",
+  "overall": {
+    "injected": 19,
+    "matched": 19,
+    "false_positives": 0,
+    "recall": 1.0,
+    "precision": 1.0
+  },
+  "cases": [
+    {
+      "name": "orders_messy.xlsx",
+      "rows": 65,
+      "columns": 8,
+      "encoding": "xlsx",
+      "injected": 9,
+      "detected": 9,
+      "matched": 9,
+      "recall": 1.0,
+      "precision": 1.0,
+      "missed": [],
+      "false_positives": [],
+      "issue_total": 9,
+      "score": null
+    },
+    {
+      "name": "orders_messy.csv",
+      "rows": 65,
+      "columns": 8,
+      "encoding": "gb18030",
+      "injected": 10,
+      "detected": 10,
+      "matched": 10,
+      "recall": 1.0,
+      "precision": 1.0,
+      "missed": [],
+      "false_positives": [],
+      "issue_total": 10,
+      "score": null
+    },
+    {
+      "name": "clean_orders.csv",
+      "rows": 20,
+      "columns": 5,
+      "encoding": "utf-8-sig",
+      "injected": 0,
+      "detected": 0,
+      "matched": 0,
+      "recall": 1.0,
+      "precision": 1.0,
+      "missed": [],
+      "false_positives": [],
+      "issue_total": 0,
+      "score": null
+    }
+  ]
+}
