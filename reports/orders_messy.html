@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>脏表医生 · TableDoctor 体检报告 - orders_messy.xlsx</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:32px;background:#f6f7f9;color:#1f2430;
+ font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:#6b7280;font-size:13px;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px}
+.card .k{font-size:12px;color:#6b7280;margin-bottom:6px}
+.card .v{font-size:20px;font-weight:600;word-break:break-all}
+.score .v{font-size:34px;color:#dc2626}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;font-size:13px;vertical-align:top;border-bottom:1px solid #eef0f3}
+th{background:#f9fafb;font-size:12px;color:#4b5563;font-weight:600}
+tr:last-child td{border-bottom:none}
+td.num{white-space:nowrap}
+td.samples{color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px}
+td.note{color:#6b7280;font-size:12px}
+td.ck{font-weight:600;white-space:nowrap}
+td.empty{text-align:center;color:#059669;padding:28px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;white-space:nowrap}
+.badge.error{background:#fee2e2;color:#b91c1c}
+.badge.warning{background:#fef3c7;color:#92400e}
+.badge.info{background:#e0e7ff;color:#3730a3}
+.foot{margin-top:20px;color:#9ca3af;font-size:12px}
+</style></head>
+<body><div class="wrap">
+<h1>脏表医生 · TableDoctor 体检报告</h1>
+<div class="sub">全部本地运行，不上传任何数据</div>
+<div class="cards">
+ <div class="card"><div class="k">文件</div><div class="v">orders_messy.xlsx</div></div>
+ <div class="card"><div class="k">数据行</div><div class="v">65</div></div>
+ <div class="card"><div class="k">列数</div><div class="v">8</div></div>
+ <div class="card"><div class="k">编码 / 格式</div><div class="v">xlsx</div></div>
+ <div class="card score"><div class="k">健康分</div><div class="v">47</div></div>
+ <div class="card"><div class="k">问题总数</div><div class="v">9</div></div>
+</div>
+<h2 style="font-size:16px;margin:0 0 10px">体检结论</h2>
+<p style="font-size:13px;color:#4b5563;margin:0 0 24px">
+&#38656;&#20462;&#22797; 5 &#183; &#24314;&#35758;&#22788;&#29702; 3 &#183;
+&#25552;&#31034; 1</p>
+<h2 style="font-size:16px;margin:0 0 10px">问题清单</h2>
+<table>
+<thead><tr>
+<th>级别</th><th>检查项</th><th>列</th>
+<th>影响数量</th><th>样例</th><th>说明 / 依据</th>
+</tr></thead>
+<tbody>
+<tr><td><span class="badge error">需修复</span></td><td class="ck">主键重复</td><td>订单号 (#0)</td><td class="num">5</td><td class="samples">SO20240001, SO20240002, SO20240003, SO20240004, SO20240011</td><td class="note">指定主键列出现重复值，一条记录被拆成多条 | repeated key values</td></tr>
+<tr><td><span class="badge error">需修复</span></td><td class="ck">重复行</td><td>（整表）</td><td class="num">4</td><td class="samples">63, 64, 65, 66</td><td class="note">存在完全相同的行，求和或计数会被重复放大 | exact duplicate rows</td></tr>
+<tr><td><span class="badge error">需修复</span></td><td class="ck">整列为空</td><td>废弃列 (#6)</td><td class="num">65</td><td class="samples"></td><td class="note">该列所有单元格都为空，通常是导出或合并表头出错 | all cells blank</td></tr>
+<tr><td><span class="badge error">需修复</span></td><td class="ck">类型不一致</td><td>下单日期 (#2)</td><td class="num">2</td><td class="samples">2024/11/3, 2024/12/4</td><td class="note">数值列混入文本，或日期列混用多种格式 | date column mixing 2 non-ISO values</td></tr>
+<tr><td><span class="badge error">需修复</span></td><td class="ck">类型不一致</td><td>金额 (#4)</td><td class="num">3</td><td class="samples">1,200元, 1,200元, 1,200元</td><td class="note">数值列混入文本，或日期列混用多种格式 | numeric column with 3 text cells</td></tr>
+<tr><td><span class="badge warning">建议处理</span></td><td class="ck">缺失率偏高</td><td>地区 (#3)</td><td class="num">38</td><td class="samples"></td><td class="note">缺失比例超过 50%，统计口径需要先声明 | missing ratio 0.585</td></tr>
+<tr><td><span class="badge warning">建议处理</span></td><td class="ck">近似空列</td><td>备注 (#5)</td><td class="num">62</td><td class="samples"></td><td class="note">有效填充比例不超过 5%，几乎没有信息量 | fill ratio 0.046</td></tr>
+<tr><td><span class="badge warning">建议处理</span></td><td class="ck">首尾空格 / 不可见字符</td><td>客户 (#1)</td><td class="num">35</td><td class="samples">repr:&#x27;张三 &#x27;, repr:&#x27;李四 &#x27;, repr:&#x27;王五 &#x27;, repr:&#x27;赵六 &#x27;, repr:&#x27;钱七 &#x27;</td><td class="note">会导致分组、关联、模糊匹配全部失败 | leading/trailing/invisible whitespace</td></tr>
+<tr><td><span class="badge info">提示</span></td><td class="ck">常量列</td><td>渠道 (#7)</td><td class="num">65</td><td class="samples">官网</td><td class="note">整列只有一个取值，多数情况下可以直接删除 | single distinct value</td></tr>
+</tbody></table>
+<div class="foot">生成时间 &#183; 2026-11-19 23:02:39 &#183; TableDoctor 0.1.0</div>
+</div></body></html>

@@ -115,4 +115,6 @@ fixtures/             gen.py 造脏表 + 账本，evaluate.py 算召回/精度
 reports/              真实运行产出的报告样例（xlsx / csv / 干净表）
 ```
 
+公开仓库：<https://github.com/Leo-web-lhy/c9-tabledoctor>
+
 详细背景、AI 协作过程与复盘见同目录 `2023108610260_C9_proposal.md`、`2023108610260_C9_mvp.md`、`2023108610260_C9_AI日志.md`、`2023108610260_C9_拿来说明.md`、`2023108610260_C9_AAR_W1.md`。

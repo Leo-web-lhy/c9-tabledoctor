@@ -1,0 +1,25 @@
+{
+  "tool": "tabledoctor",
+  "version": "0.1.0",
+  "generated_at": "2026-11-19 23:02:39",
+  "file": "clean_orders.csv",
+  "path": "C:\\.cogseed\\userWorkSpace\\我的挑战有哪些\\C9\\tabledoctor\\fixtures\\data\\clean_orders.csv",
+  "rows": 20,
+  "columns": 5,
+  "header": [
+    "订单号",
+    "客户",
+    "下单日期",
+    "地区",
+    "金额"
+  ],
+  "encoding": "utf-8-sig",
+  "delimiter": ",",
+  "score": 100,
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "issues": []
+}

@@ -1,0 +1,127 @@
+{
+  "tool": "tabledoctor",
+  "version": "0.1.0",
+  "generated_at": "2026-11-19 23:02:39",
+  "file": "orders_messy.xlsx",
+  "path": "C:\\.cogseed\\userWorkSpace\\我的挑战有哪些\\C9\\tabledoctor\\fixtures\\data\\orders_messy.xlsx",
+  "rows": 65,
+  "columns": 8,
+  "header": [
+    "订单号",
+    "客户",
+    "下单日期",
+    "地区",
+    "金额",
+    "备注",
+    "废弃列",
+    "渠道"
+  ],
+  "encoding": "xlsx",
+  "delimiter": null,
+  "score": 47,
+  "counts": {
+    "error": 5,
+    "warning": 3,
+    "info": 1
+  },
+  "issues": [
+    {
+      "check": "duplicate_key",
+      "severity": "error",
+      "column": 0,
+      "count": 5,
+      "samples": [
+        "SO20240001",
+        "SO20240002",
+        "SO20240003",
+        "SO20240004",
+        "SO20240011"
+      ],
+      "message": "repeated key values"
+    },
+    {
+      "check": "duplicate_rows",
+      "severity": "error",
+      "column": -1,
+      "count": 4,
+      "samples": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "message": "exact duplicate rows"
+    },
+    {
+      "check": "empty_column",
+      "severity": "error",
+      "column": 6,
+      "count": 65,
+      "samples": [],
+      "message": "all cells blank"
+    },
+    {
+      "check": "type_mismatch",
+      "severity": "error",
+      "column": 2,
+      "count": 2,
+      "samples": [
+        "2024/11/3",
+        "2024/12/4"
+      ],
+      "message": "date column mixing 2 non-ISO values"
+    },
+    {
+      "check": "type_mismatch",
+      "severity": "error",
+      "column": 4,
+      "count": 3,
+      "samples": [
+        "1,200元",
+        "1,200元",
+        "1,200元"
+      ],
+      "message": "numeric column with 3 text cells"
+    },
+    {
+      "check": "high_missing_column",
+      "severity": "warning",
+      "column": 3,
+      "count": 38,
+      "samples": [],
+      "message": "missing ratio 0.585"
+    },
+    {
+      "check": "near_empty_column",
+      "severity": "warning",
+      "column": 5,
+      "count": 62,
+      "samples": [],
+      "message": "fill ratio 0.046"
+    },
+    {
+      "check": "whitespace_cells",
+      "severity": "warning",
+      "column": 1,
+      "count": 35,
+      "samples": [
+        "repr:'张三 '",
+        "repr:'李四 '",
+        "repr:'王五 '",
+        "repr:'赵六 '",
+        "repr:'钱七 '"
+      ],
+      "message": "leading/trailing/invisible whitespace"
+    },
+    {
+      "check": "constant_column",
+      "severity": "info",
+      "column": 7,
+      "count": 65,
+      "samples": [
+        "官网"
+      ],
+      "message": "single distinct value"
+    }
+  ]
+}
